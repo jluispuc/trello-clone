@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'trello-clone';
+  characteristics = "(The most beatifull)";
+  author1 = "Luis P. Sarmiento";
+  author2 = "Laura Cuy";
 }

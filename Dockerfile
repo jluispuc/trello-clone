@@ -12,4 +12,4 @@ COPY ["src/", "/app/src/"]
 
 EXPOSE 4200
 
-CMD ["npm", "start"]
+CMD ["npm", "start", "--", "--host", "0.0.0.0", "--poll", "500"]
