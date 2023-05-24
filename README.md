@@ -27,6 +27,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## Docker
+**Each new dependency that is required should be added to package.json and the docker image should be rebuilt**.
+
 To build the image run `docker build -t clonetrello .`
 To run a container run this command:
 ```bash
