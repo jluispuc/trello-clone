@@ -26,6 +26,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+## Tailwindcss configuration
+To get more help about tailwind configuration go check out [Configuration](https://tailwindcss.com/docs/configuration).
+
 ## Docker
 **Each new dependency that is required should be added to package.json and the docker image should be rebuilt**.
 
