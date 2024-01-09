@@ -6,8 +6,10 @@ import { Product } from '../../models/product.model'
 export class DataSourceProduct extends DataSource<Product>{
 
   data = new BehaviorSubject<Product[]>([]);
+  originalData: Product[] = [];
 
   init(products: Product[]){
+    this.originalData = products;
     this.data.next(products);
   }
 
@@ -40,5 +42,14 @@ export class DataSourceProduct extends DataSource<Product>{
 
       this.data.next(products);
     }
+  }
+
+  find(query: string) {
+    const newProducts = this.originalData
+    .filter(item => {
+      const word = `${item.id}-${item.title}-${item.price}`;
+      return word.toLowerCase().includes(query.toLowerCase())
+    });
+    this.data.next(newProducts);
   }
 }
