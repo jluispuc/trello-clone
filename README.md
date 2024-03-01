@@ -37,3 +37,8 @@ To run a container run this command:
 ```bash
 docker container run --rm --name dev_clonetrello -p 4200:4200 -v ${PWD}/src:/app/src clonetrello
 ```
+## Resources
+- [unDraw](https://undraw.co/illustrations)
+- [Response Design Tailwind](https://tailwindcss.com/docs/responsive-design)
+- [Tailwind Forms](https://github.com/tailwindlabs/tailwindcss-forms)
+- [Boilerplate Trello](https://gist.github.com/nicobytes/92f050c77c8c8e5be63e97c1ae0b9c83)
