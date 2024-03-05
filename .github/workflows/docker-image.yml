@@ -31,11 +31,12 @@ jobs:
       id: docker_meta
       uses: docker/metadata-action@v5
       with:
-        images: luispuc/trello-clone
+        images: ${{ variables.DOCKERHUB_PROFILE }}/trello-clone
         flavor: |
           latest=false
         tags: |
-          type=raw,value=gha-${{ github.run_id }},enable=${{ endsWith(github.ref, github.event.repository.default_branch) }}
+          type=raw,value=latest,enable=${{ endsWith(github.ref, github.event.repository.default_branch) }}
+        # type=raw,value=gha-${{ github.run_id }},enable=${{ endsWith(github.ref, github.event.repository.default_branch) }}
     
     - name: Build and push container image to registry (Docker Hub)
       uses: docker/build-push-action@v5

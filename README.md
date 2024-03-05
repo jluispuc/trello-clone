@@ -37,6 +37,10 @@ To run a container run this command:
 ```bash
 docker container run --rm --name dev_clonetrello -p 4200:4200 -v ${PWD}/src:/app/src clonetrello
 ```
+To run a container in Azure using Azure Container Instances, use the following command:
+```bash
+az container create --resource-group <your_rg> --cpu 1 --dns-name-label <your_app_name> --image <dockerhub_profile>/trello-clone:<label> --ip-address Public --location "West US 3" --memory 1.5 --name <your_app_name> --os-type Linux --protocol tcp --ports 80 --restart-policy Always
+```
 ## Resources
 - [unDraw](https://undraw.co/illustrations)
 - [Response Design Tailwind](https://tailwindcss.com/docs/responsive-design)
