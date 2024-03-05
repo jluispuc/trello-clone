@@ -31,7 +31,7 @@ jobs:
       id: docker_meta
       uses: docker/metadata-action@v5
       with:
-        images: ${{ variables.DOCKERHUB_PROFILE }}/trello-clone
+        images: ${{ vars.DOCKERHUB_PROFILE }}/trello-clone
         flavor: |
           latest=false
         tags: |
