@@ -22,4 +22,4 @@ COPY --from=build /app/dist/trello-clone /usr/share/nginx/html
 # EXPOSE 4200
 
 # CMD ["npm", "start", "--", "--host", "0.0.0.0", "--poll", "500"]
-EXPOSE 80
+EXPOSE 80 443
