@@ -1,6 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { faTrello } from '@fortawesome/free-brands-svg-icons'
-import { faBox, faWaveSquare, faClock, faAngleUp, faAngleDown, faHeart, faBorderAll, faUsers, faGear } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faBox, 
+  faWaveSquare, 
+  faClock, 
+  faAngleUp, 
+  faAngleDown, 
+  faHeart, 
+  faBorderAll, 
+  faUsers, 
+  faGear,
+  faFile,
+  faSignIn,
+  faListAlt,
+  faTable
+} from '@fortawesome/free-solid-svg-icons';
 import { Board } from 'src/app/models/board.model';
 
 
@@ -21,6 +35,10 @@ export class BoardsComponent implements OnInit {
   faBorderAll = faBorderAll;
   faUsers = faUsers;
   faGear = faGear;
+  faFile = faFile;
+  faSignIn = faSignIn;
+  faListAlt = faListAlt;
+  faTable = faTable;
 
   boards: Board[] = [
     {
