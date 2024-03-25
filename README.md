@@ -41,6 +41,18 @@ To run a container in Azure using Azure Container Instances, use the following c
 ```bash
 az container create --resource-group <your_rg> --cpu 1 --dns-name-label <your_app_name> --image <dockerhub_profile>/trello-clone:<label> --ip-address Public --location "West US 3" --memory 1.5 --name <your_app_name> --os-type Linux --protocol tcp --ports 80 --restart-policy Always
 ```
+To run a container in Azure App Container, use the following command:
+```bash
+az containerapp create `
+  --name <your_app_name> `
+  --resource-group <your_rg> `
+  --environment <your_env> `
+  --image <dockerhub_profile>trello-clone:<label> `
+  --target-port 80 `
+  --ingress 'external'
+  --cpu 0.25
+  --memory '0.5Gi'
+```
 ## Resources
 - [unDraw](https://undraw.co/illustrations)
 - [Response Design Tailwind](https://tailwindcss.com/docs/responsive-design)
